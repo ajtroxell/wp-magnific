@@ -3,7 +3,7 @@
 	Plugin Name: WP Magnific
 	Plugin URI:	https://bitbucket.org/atroxell/wp-magnific
 	Description: Makes usage of Magnific-Popup in Wordpress simple. Provides caption support and custom styles.
-	Version: 1.1.0
+	Version: 1.1.1
 	Author: AJ Troxell
 	License: GNU General Public License v2
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,10 +64,10 @@
 	}
 
 	function wp_magnific() {
-	    wp_enqueue_script( 'wp_magnific_jquery', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.magnific-popup.min.js' );
+	    wp_enqueue_script( 'wp_magnific_jquery', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.magnific-popup.min.js', array('jquery') );
 	    	wp_enqueue_script('wp_magnific_jquery');
 
-	    wp_enqueue_script( 'wp_magnific_js', plugin_dir_url( __FILE__ ) . 'assets/js/wp-magnific.min.js' );
+	    wp_enqueue_script( 'wp_magnific_js', plugin_dir_url( __FILE__ ) . 'assets/js/wp-magnific.min.js', array('jquery') );
 	    	wp_enqueue_script('wp_magnific_js');
 
 	    wp_enqueue_style( 'wp_magnific_css', plugin_dir_url( __FILE__ ) . 'assets/css/magnific-popup.min.css' );

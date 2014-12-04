@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
     });
     // gallery images with captions
     $('.gallery').magnificPopup({
-        delegate: 'a',
+        delegate: 'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]',
         type: 'image',
         image: {
             markup: '<div class="mfp-figure">'+
